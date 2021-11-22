@@ -27,6 +27,7 @@ class PlaceholderFragment : Fragment() {
         super.onCreate(savedInstanceState)
         pageViewModel = ViewModelProvider(this).get(PageViewModel::class.java).apply {
             setIndex(arguments?.getInt(ARG_SECTION_NUMBER) ?: 1)
+            setMessage(arguments?.getString(ARG_SECTION_TITLE) ?: "")
         }
     }
 
@@ -51,16 +52,18 @@ class PlaceholderFragment : Fragment() {
          * fragment.
          */
         private const val ARG_SECTION_NUMBER = "section_number"
+        private const val ARG_SECTION_TITLE = "section_title"
 
         /**
          * Returns a new instance of this fragment for the given section
          * number.
          */
         @JvmStatic
-        fun newInstance(sectionNumber: Int): PlaceholderFragment {
+        fun newInstance(sectionNumber: Int, sectionTitle: String): PlaceholderFragment {
             return PlaceholderFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_SECTION_NUMBER, sectionNumber)
+                    putString(ARG_SECTION_TITLE, sectionTitle)
                 }
             }
         }
