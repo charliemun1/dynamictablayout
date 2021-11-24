@@ -1,14 +1,54 @@
 [
   {
-    "title": "Schools"
+    "title": "Churches",
+    "description": "Available Sunday Services",
+    "items": [
+      {
+        "name": "Morning Service",
+        "start_time": "7:00 am",
+        "end_time": "9:00 am"
+      },
+      {
+        "name": "Afternoon Service",
+        "start_time": "1:00 pm",
+        "end_time": "3:00 pm"
+      },
+      {
+        "name": "Evening Service",
+        "start_time": "5:00 pm",
+        "end_time": "7:00 pm"
+      }
+    ]
   },
   {
-    "title": "Hospitals"
+    "title": "Mosques",
+    "description": "Open Prayer Times",
+    "items": [
+      {
+        "name": "Morning Hours",
+        "start_time": "5:00 am",
+        "end_time": "5:30 am"
+      },
+      {
+        "name": "Afternoon Hours",
+        "start_time": "12:00 pm",
+        "end_time": "12:30 pm"
+      },
+      {
+        "name": "Evening Hours",
+        "start_time": "4:00 pm",
+        "end_time": "4:30 pm"
+      }
+    ]
   },
   {
-    "title": "Churches"
+    "title": "Schools",
+    "description": "No info yet",
+    "items": []
   },
   {
-    "title": "Mosques"
+    "title": "Hospitals",
+    "description": "No info yet",
+    "items": []
   }
 ]

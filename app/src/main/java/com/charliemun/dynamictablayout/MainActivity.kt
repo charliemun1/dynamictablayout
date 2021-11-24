@@ -15,7 +15,7 @@ import org.json.JSONArray
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
+    var jsonArrayData: JSONArray? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -25,18 +25,12 @@ class MainActivity : AppCompatActivity() {
         val titles = assets.open("titles.json").bufferedReader().use {
             it.readText()
         }
-        val jsonArray = JSONArray(titles)
+        jsonArrayData = JSONArray(titles)
 
-        val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager, jsonArray)
+        val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager, jsonArrayData!!)
         val viewPager: ViewPager = binding.viewPager
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = binding.tabs
         tabs.setupWithViewPager(viewPager)
-        val fab: FloatingActionButton = binding.fab
-
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
     }
 }

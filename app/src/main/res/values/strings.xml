@@ -2,4 +2,6 @@
     <string name="app_name">DynamicTabLayout</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="collapse_link_lbl">collapse details button</string>
+    <string name="expand_link_lbl">expand details buttton</string>
 </resources>
